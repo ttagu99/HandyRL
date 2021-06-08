@@ -21,13 +21,13 @@ import torch.distributions as dist
 import torch.optim as optim
 import psutil
 
-from .environment import prepare_env, make_env
-from .util import map_r, bimap_r, trimap_r, rotate
-from .model import to_torch, to_gpu, RandomModel, ModelWrapper
-from .losses import compute_target
-from .connection import MultiProcessJobExecutor
-from .connection import accept_socket_connections
-from .worker import WorkerCluster, WorkerServer
+from handyrl.environment import prepare_env, make_env
+from handyrl.util import map_r, bimap_r, trimap_r, rotate
+from handyrl.model import to_torch, to_gpu, RandomModel, ModelWrapper
+from handyrl.losses import compute_target
+from handyrl.connection import MultiProcessJobExecutor
+from handyrl.connection import accept_socket_connections
+from handyrl.worker import WorkerCluster, WorkerServer
 
 
 def make_batch(episodes, args):

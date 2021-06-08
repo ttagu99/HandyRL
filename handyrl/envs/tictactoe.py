@@ -11,7 +11,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from ..environment import BaseEnvironment
+import sys
+from os import path
+print(path.dirname( path.dirname( path.abspath(__file__) ) ))
+sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ))
+from environment import BaseEnvironment
+# from ..environment import BaseEnvironment
 
 
 class Conv(nn.Module):
